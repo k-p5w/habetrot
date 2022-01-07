@@ -14,47 +14,19 @@
 
     <header>
         <h2>全・芸人info</h2>
-        <p>一覧にない芸人の場合は検索を行ってください</p>
-        <!-- <div class="pill-nav">
-            <a href="/reload">再表示</a>
-        </div> -->
     </header>
 
     <main>
         <section>
             <!-- 動作を指定 -->
-            <form method="post" action="/view">
+            <form method="post" action="/sunmusic">
                 <input type="text" id="actorItem" name="acotr" size="60" placeholder="複数指定も可 e.g.錦鯉/ラランド">
                 <button type="submit">検索開始</button>
             </form>
 
         </section>
         <P></P>
-        <section>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>データ取得日時</th>
-                        <th>演者名</th>
-                        <th>詳細</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{range .}}
-                    <tr>
-                        <td>{{.Modtimes}}</td>
-                        <td>{{.Name}}</td>
-                        <!-- <td><a href="/data/lol/{{.FileName}}" target="_blank">{{.Name}}</td></a> -->
-                        <!-- <td> <img src="/data/lol/{{.FileName}}" /></td> -->
-                        <td><a href="/view?acotrname={{.Name}}" target="_blank">詳細を表示する</td></a>
-                    </tr>
-                    {{end}}
-
-                </tbody>
-            </table>
-
-        </section>
     </main>
 
 

@@ -87,6 +87,8 @@
   .follow-me li a[href*="audiobook.jp"]::before        { content: "\f518"; }
   .follow-me li a[href*="tiktok.com"]::before        { content: "\e07b"; }
   .follow-me li a[href*="mixi.jp"]::before        { content: "\4d"; }
+  .follow-me li a[href*="linkcloud.mu"]::before        { content: "\f8af"; }
+  .follow-me li a[href*="lit.link"]::before        { content: "\e1cd"; }
   .follow-me li a[href$="/feed"]::before              { content: "\f09e"; }
   .follow-me li a[href$="/subscribe"]::before         { content: "\f000"; font-family: blogicon; }
   
@@ -140,6 +142,8 @@
   .follow-me li a[href*="audiobook.jp"]:hover::before    { background-color: #e0315b; }
   .follow-me li a[href*="tiktok.com"]:hover::before         { background-color: #363636; }
   .follow-me li a[href$="mixi.jp"]:hover::before              { background-color: #d59d2e; }
+  .follow-me li a[href$="linkcloud.mu"]:hover::before              { background-color: #eaeaea; }
+  .follow-me li a[href$="lit.link"]:hover::before              { background-color: #eaeaea; }
   .follow-me li a[href$="/feed"]:hover::before              { background-color: #ffa500; }
   .follow-me li a[href$="/subscribe"]:hover::before         { background-color: #363636; }
 

@@ -37,8 +37,8 @@
   .follow-me li a:hover::before {
     color: #fff;
   }
-  .follow-me li a[href*="amazon.co.jp"]::before,
-  .follow-me li a[href*="amazon.com"]::before,        { content: "\f270"; }
+  .follow-me li a[href*="amazon.co.jp"]::before   { content: "\f270"; }
+  .follow-me li a[href*="amazon.com"]::before        { content: "\f270"; }
   .follow-me li a[href*="codepen.io"]::before         { content: "\f1cb"; }
   .follow-me li a[href*="delicious.com"]::before      { content: "\f1a5"; }
   .follow-me li a[href*="deviantart.com"]::before     { content: "\f1bd"; }
@@ -77,7 +77,7 @@
   .follow-me li a[href*="youtube.com"]::before        { content: "\f16a"; }
   .follow-me li a[href*="note.com"]::before        { content: "\f249"; }
   .follow-me li a[href*="radiotalk.jp"]::before        { content: "\f130"; }
-  .follow-me li a[href*="ameblo.jp"]::before        { content: "\f0c1"; }
+  .follow-me li a[href*="ameblo.jp"]::before        { content: "\f781"; }
   .follow-me li a[href*="sunmusic-gp.co.jp"]::before        { content: "\f130"; }
   .follow-me li a[href*="titan-net.co.jp"]::before        { content: "\f130"; }
   .follow-me li a[href*="maseki.co.jp"]::before        { content: "\f130"; }
@@ -86,9 +86,9 @@
   .follow-me li a[href*="tver.jp"]::before        { content: "\f26c"; }
   .follow-me li a[href*="audiobook.jp"]::before        { content: "\f518"; }
   .follow-me li a[href*="tiktok.com"]::before        { content: "\e07b"; }
-  .follow-me li a[href*="mixi.jp"]::before        { content: "\4d"; }
-  .follow-me li a[href*="linkcloud.mu"]::before        { content: "\f8af"; }
-  .follow-me li a[href*="lit.link"]::before        { content: "\e1cd"; }
+  .follow-me li a[href*="mixi.jp"]::before            { content: "\4d"; }
+  .follow-me li a[href*="linkcloud.mu"]::before       { content: "\f0c1";}
+  .follow-me li a[href*="lit.link"]::before           { content: "\f0c1";}
   .follow-me li a[href$="/feed"]::before              { content: "\f09e"; }
   .follow-me li a[href$="/subscribe"]::before         { content: "\f000"; font-family: blogicon; }
   
@@ -138,12 +138,12 @@
   .follow-me li a[href*="maseki.co.jp"]:hover::before         { background-color: #363636; }
   .follow-me li a[href*="m-1gp.com"]:hover::before         { background-color: #363636; }
   .follow-me li a[href*="manzaikyokai.org"]:hover::before    { background-color: #363636; }
-  .follow-me li a[href*="tver.jp"]:hover::before    { background-color: #40b8dc; }
-  .follow-me li a[href*="audiobook.jp"]:hover::before    { background-color: #e0315b; }
+  .follow-me li a[href*="tver.jp"]:hover::before            { background-color: #40b8dc; }
+  .follow-me li a[href*="audiobook.jp"]:hover::before       { background-color: #e0315b; }
   .follow-me li a[href*="tiktok.com"]:hover::before         { background-color: #363636; }
-  .follow-me li a[href$="mixi.jp"]:hover::before              { background-color: #d59d2e; }
-  .follow-me li a[href$="linkcloud.mu"]:hover::before              { background-color: #eaeaea; }
-  .follow-me li a[href$="lit.link"]:hover::before              { background-color: #eaeaea; }
+  .follow-me li a[href$="mixi.jp"]:hover::before            { background-color: #d59d2e; }
+  .follow-me li a[href$="linkcloud.mu"]:hover::before       { background-color: #363636; }
+  .follow-me li a[href$="lit.link"]:hover::before           { background-color: #363636; }
   .follow-me li a[href$="/feed"]:hover::before              { background-color: #ffa500; }
   .follow-me li a[href$="/subscribe"]:hover::before         { background-color: #363636; }
 

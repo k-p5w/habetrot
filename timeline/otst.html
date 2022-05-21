@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script>document.getElementsByTagName("html")[0].className += " js";</script> -->
+  <script>
+    // File#: _1_vertical-timeline
+    // Usage: codyhouse.co/license
+    (function () {
+      var VTimeline = function (element) {
+        this.element = element;
+        this.sections = this.element.getElementsByClassName('js-v-timeline__section');
+        this.animate = this.element.getAttribute('data-animation') && this.element.getAttribute('data-animation') == 'on' ? true : false;
+        this.animationClass = 'v-timeline__section--animate';
+        this.animationDelta = '-150px';
+        initVTimeline(this);
+      };
+
+      function initVTimeline(element) {
+        if (!element.animate) return;
+        for (var i = 0; i < element.sections.length; i++) {
+          var observer = new IntersectionObserver(vTimelineCallback.bind(element, i),
+            { rootMargin: "0px 0px " + element.animationDelta + " 0px" });
+          observer.observe(element.sections[i]);
+        }
+      };
+
+      function vTimelineCallback(index, entries, observer) {
+        if (entries[0].isIntersecting) {
+          Util.addClass(this.sections[index], this.animationClass);
+          observer.unobserve(this.sections[index]);
+        }
+      };
+
+      //initialize the VTimeline objects
+      var timelines = document.querySelectorAll('.js-v-timeline'),
+        intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype),
+        reducedMotion = Util.osHasReducedMotion();
+      if (timelines.length > 0) {
+        for (var i = 0; i < timelines.length; i++) {
+          if (intersectionObserverSupported && !reducedMotion) (function (i) { new VTimeline(timelines[i]); })(i);
+          else timelines[i].removeAttribute('data-animation');
+        }
+      }
+    }());
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/_base.css">
+
+  <title>オトステの歴史</title>
+</head>
+
+<body>
+
+  <div class="position-relative z-index-1 overflow-hidden padding-y-xl bg-dark">
+    <div class="margin-bottom-lg">
+      <h1 class="text-center">ジグザグジギー池田、ルシファー吉岡、ウエストランド井口でやっているトーク番組の歴史</h1>
+    </div>
+
+    <div class="container max-width-adaptive-lg">
+      <div class="v-timeline v-timeline--icons js-v-timeline" data-animation="on">
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-primary border border-3 border-bg-dark" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+              <g>
+                <path
+                  d="M23.707,6.736,17.263.293A1,1,0,0,0,16.556,0H7.444a1,1,0,0,0-.707.293L.293,6.736A1,1,0,0,0,0,7.443v9.114a1,1,0,0,0,.293.707l6.444,6.443A1,1,0,0,0,7.444,24h9.112a1,1,0,0,0,.707-.293l6.444-6.443A1,1,0,0,0,24,16.557V7.443A1,1,0,0,0,23.707,6.736ZM13.645,5,13,14H11l-.608-9ZM12,20a2,2,0,1,1,2-2A2,2,0,0,1,12,20Z">
+                </path>
+                <circle cx="8" cy="8" r="2"></circle>
+              </g>
+            </svg>
+          </div>
+
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2019-12-20">平成31年12月</time>
+              </div>
+
+              <div class="text-component">
+                <h2>３人が集まった番組の初代放送がはじまる</h2>
+
+                <p>このときのタイトルは「実は第7世代です。」で毎週金曜日19時、全4回配信の予定と番組ページに書かれている</p>
+                <p>また、会員登録＆TOKYO FMからリリースされているアプリ「AuDee」をインストールすることで、2022時点では過去回を聴けます。</p>
+              </div>
+
+              <div class="margin-top-md">
+                <a class="btn btn--primary" href="https://audee.jp/voice/show/15910" target="_blank"
+                  rel="noopener noreferrer">スマホで聞く</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="container max-width-adaptive-lg">
+          <div class="v-timeline v-timeline--icons js-v-timeline" data-animation="on">
+            <section class="v-timeline__section js-v-timeline__section">
+              <div class="v-timeline__marker bg-primary border border-3 border-bg-dark" aria-hidden="true">
+                <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+                  <g>
+                    <path
+                      d="M23.707,6.736,17.263.293A1,1,0,0,0,16.556,0H7.444a1,1,0,0,0-.707.293L.293,6.736A1,1,0,0,0,0,7.443v9.114a1,1,0,0,0,.293.707l6.444,6.443A1,1,0,0,0,7.444,24h9.112a1,1,0,0,0,.707-.293l6.444-6.443A1,1,0,0,0,24,16.557V7.443A1,1,0,0,0,23.707,6.736ZM13.645,5,13,14H11l-.608-9ZM12,20a2,2,0,1,1,2-2A2,2,0,0,1,12,20Z">
+                    </path>
+                    <circle cx="8" cy="8" r="2"></circle>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <time class="v-timeline__date-value" datetime="2020-5-2">令和2年5月</time>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>ゲラステの初回が配信される</h2>
+
+                    <p>GERA放送局にて、毎週土曜日20時にゲラステが配信された</p>
+                  </div>
+
+                  <blockquote class="twitter-tweet">
+                    <p lang="ja" dir="ltr">
+                      【毎週土曜日公開】<br>本日よりジグザグジギー池田さん、ルシファー吉岡さん、ウエストランド井口さんのラジオが始まりました！<br><br>JFNパーク内で放送されていた「実は第7世代です」の番組が事務所と放送局の垣根を越えて…！<br><br>▼アプリDL、視聴はこちらから<a
+                        href="https://t.co/TdKkatprMb">https://t.co/TdKkatprMb</a><a
+                        href="https://twitter.com/hashtag/%E3%82%B2%E3%83%A9%E3%82%B9%E3%83%86?src=hash&amp;ref_src=twsrc%5Etfw">#ゲラステ</a><a
+                        href="https://twitter.com/hashtag/GERA?src=hash&amp;ref_src=twsrc%5Etfw">#GERA</a> <a
+                        href="https://t.co/1pqB0gsGdT">pic.twitter.com/1pqB0gsGdT</a></p>&mdash; お笑いラジオアプリGERA@毎日20時更新
+                    (@radio_gera) <a
+                      href="https://twitter.com/radio_gera/status/1256539327447789569?ref_src=twsrc%5Etfw">May 2,
+                      2020</a>
+                  </blockquote>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="v-timeline__section js-v-timeline__section">
+              <div class="v-timeline__marker bg-accent border border-3 border-bg-dark" aria-hidden="true">
+                <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+                  <g>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <time class="v-timeline__date-value" datetime="2020-6-22">令和2年6月</time>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>AuDeeでの番組タイトルが変更</h2>
+
+                    <p>「実は第7世代です。」から「SML」にタイトルが改名される</p>
+                  </div>
+
+                </div>
+
+                <div class="v-timeline__items-group">
+                  <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                    <div class="v-timeline__date margin-bottom-sm">
+                      <time class="v-timeline__date-value" datetime="2020-7-13">令和2年7月</time>
+                    </div>
+
+                    <div class="text-component">
+                      <h2>AuDeeでの「エスエムエル」の最終回が配信される</h2>
+
+                      <p>ジグザグジギー池田とルシファー吉岡とウエストランド井口のSMLの最終回が配信される</p>
+                    </div>
+
+                  </div>
+
+
+                </div>
+            </section>
+
+            <section class="v-timeline__section js-v-timeline__section">
+              <div class="v-timeline__marker bg-contrast-high border border-3 border-bg-dark" aria-hidden="true">
+                <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+                  <g>
+                    <path d="M2,0C1.448,0,1,0.448,1,1v22c0,0.552,0.448,1,1,1s1-0.448,1-1V1C3,0.448,2.552,0,2,0z"></path>
+                    <path d="M23,2H6C5.448,2,5,2.448,5,3v12c0,0.552,0.448,1,1,1h17l-3-7L23,2z"></path>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <time class="v-timeline__date-value" datetime="2020-12-26">令和2年12月末</time>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>ゲラステの最終回が配信される</h2>
+
+                    <p>番組のアーカイブは2021年1月末まで聞けた</p>
+
+                    <blockquote class="twitter-tweet">
+                      <p lang="ja" dir="ltr">ゲラステ、最終回。<br>次はどこへ羽ばたくのか。<br>聴いてね！<br><br>#35 ゲラステ、巣立ちの刻。 | ゲラステ<a
+                          href="https://twitter.com/hashtag/%E3%82%B2%E3%83%A9%E3%82%B9%E3%83%86?src=hash&amp;ref_src=twsrc%5Etfw">#ゲラステ</a>
+                        <a
+                          href="https://twitter.com/hashtag/GERA%E3%83%A9%E3%82%B8%E3%82%AA?src=hash&amp;ref_src=twsrc%5Etfw">#GERAラジオ</a><a
+                          href="https://t.co/I1jwz6cJyS">https://t.co/I1jwz6cJyS</a>
+                      </p>&mdash; ウエストランド井口 (@westiguchi) <a
+                        href="https://twitter.com/westiguchi/status/1342806606703177734?ref_src=twsrc%5Etfw">December
+                        26,
+                        2020</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="v-timeline__section js-v-timeline__section">
+              <div class="v-timeline__marker bg-primary border border-3 border-bg-dark" aria-hidden="true">
+                <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+                  <title>o-warning</title>
+                  <g>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <time class="v-timeline__date-value" datetime="2021-03-31">令和3年3月</time>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>FM那覇「CC.STATION」にゲスト出演</h2>
+
+                    <p>FM那覇で放送される深夜ラジオCC.STATION【vol.52】にてゲストで呼ばれる。番組タイトルは「ワタリドリラジオ」となる</p>
+
+                  </div>
+                  <blockquote class="twitter-tweet">
+                    <p lang="ja" dir="ltr">
+                      3月30日はジグザグジギー池田さん、ルシファー吉岡さん、ウエストランド井口さんの「ワタリドリラジオ」です📻🕊<br>なぜ「ワタリドリラジオ」なのかはお聞き頂ければわかると思います✨<br>是非お楽しみに！！<br>FM那覇CC.STATION<br>3月30日深夜24時〜<br>アプリlistenradioをダウンロードで全国で聴けます🌝📻✨
+                      <a href="https://t.co/8xj7oHfpgq">pic.twitter.com/8xj7oHfpgq</a>
+                    </p>&mdash; CC.STATION📻
+                    (@cc__station) <a
+                      href="https://twitter.com/cc__station/status/1374390003145469952?ref_src=twsrc%5Etfw">March 23,
+                      2021</a>
+                  </blockquote>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  <div class="margin-top-md">
+                    <a class="btn btn--primary" href="https://www.youtube.com/watch?v=nVvmUFL630Q">YouTubeで聞く</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- bg-primary-darker -->
+            <section class="v-timeline__section js-v-timeline__section">
+              <div class="v-timeline__marker bg-primary-darker border border-3 border-bg-dark" aria-hidden="true">
+                <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+                  <g>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                    </path>
+                  </g>
+                </svg>
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <time class="v-timeline__date-value" datetime="2021-6-22">令和3年6月</time>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>新番組「オトステ」が始まる</h2>
+
+                    <p>audiobook.jpの提供でオトステが聞けるようになる</p>
+                    <p>毎週火曜Podcast、Spotifyにて20時頃配信</p>
+                    </p>
+                  </div>
+
+                  <div class="margin-top-md">
+                    <a class="btn btn--primary" href="https://audiobook.jp/audiobook/261147">audiobook版を聴く</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-primary-darker border border-3 border-bg-dark" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+              <g>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </g>
+            </svg>
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2021-9-14">令和3年9月</time>
+              </div>
+
+              <div class="text-component">
+                <h2>オトステの公式Twitterが出来る</h2>
+
+                <p>audiobook.jpの提供でオトステが聞けるようになる</p>
+                <p>毎週火曜Podcast、Spotifyにて20時頃配信</p></p>
+              </div>
+
+              <div class="margin-top-md">
+                <a class="btn btn--primary" href="https://audiobook.jp/audiobook/261147">audiobook版を聴く</a>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+            <section class="v-timeline__section js-v-timeline__section">
+              <div class="v-timeline__marker bg-contrast-high border border-3 border-bg-dark" aria-hidden="true">
+                <svg class="icon icon--sm color-white" viewBox="0 0 24 24">
+                  <title>o-warning</title>
+                  <g>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <time class="v-timeline__date-value" datetime="2021-10-13">令和3年10月</time>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>ゲラステが一夜限りの復活</h2>
+
+                    <p>オトステの告知のための特別編が期間限定で配信された（現在は、Tweetのリンクから聞けません。）</p>
+
+                  </div>
+                  <blockquote class="twitter-tweet">
+                    <p lang="ja" dir="ltr">
+                      【特別番組】<br><br>あの人気番組「ゲラステ」が約10ヶ月振りに帰って来た！<br>魂の提供読みやコント案も大復活！<br>メールは「3gera@gera.fan」まで！<br><br>▼視聴はこちらから<a
+                        href="https://t.co/534OFrU3ao">https://t.co/534OFrU3ao</a><br><br>番組の感想は <a
+                        href="https://twitter.com/hashtag/%E3%82%B2%E3%83%A9%E3%82%B9%E3%83%86?src=hash&amp;ref_src=twsrc%5Etfw">#ゲラステ</a>
+                      <a href="https://t.co/8tIDRP3skS">pic.twitter.com/8tIDRP3skS</a></p>&mdash; お笑いラジオアプリGERA@毎日20時更新
+                    (@radio_gera) <a
+                      href="https://twitter.com/radio_gera/status/1448242111472496642?ref_src=twsrc%5Etfw">October 13,
+                      2021</a>
+                  </blockquote>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+      <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

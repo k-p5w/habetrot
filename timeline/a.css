@@ -1,0 +1,17 @@
+/* 箇条書きの形を変える */
+.line .indent-mark .dot {
+    height: .2em;
+    width: .4em;
+    border-radius: 25%;
+    background-color: rgba(3, 2, 13, .55)
+}
+
+.app:not(.presentation) .line .indent-mark .dot {
+    top: auto;
+    bottom: 0
+}
+
+/* pin止めしたものとそうでないものの段落をわける*/
+.page-list-item.pin+.page-list-item:not(.pin) {
+    clear: both;
+}

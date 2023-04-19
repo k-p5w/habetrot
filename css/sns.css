@@ -37,6 +37,10 @@
   .follow-me li a:hover::before {
     color: #fff;
   }
+  
+  .follow-me li a[href*="twitcasting.tv"]::before   { content: "\f3c9"; }
+  .follow-me li a[href*="cookpad.tv"]::before   { content: "\f26c"; }
+  .follow-me li a[href*="stardust.co.jp"]::before   { content: "\f007"; }
   .follow-me li a[href*="amazon.co.jp"]::before   { content: "\f270"; }
   .follow-me li a[href*="amazon.com"]::before        { content: "\f270"; }
   .follow-me li a[href*="codepen.io"]::before         { content: "\f1cb"; }

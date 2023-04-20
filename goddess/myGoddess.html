@@ -4,7 +4,7 @@
 <head>
     <!-- <meta charset="shift_jis"> -->
     <meta charset="UTF-8">
-    <title>最強五人組</title>
+    <title>最強🐙🌈五人組</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <!-- 静的ファイルをリンクする -->
     <link rel="stylesheet" href="./mvp.css">
@@ -32,8 +32,23 @@
 
     <main>
         <header>
+
+            <nav>
+                <a href="/"><img alt="Logo" src="logo.png" width="210" height="70"></a>
+                <ul>
+                    <li><a href="#">Site Menu</a>
+                        <ul>
+                            <li><a href="#profile">プロフィール</a></li>
+                            <li><a href="#timeline">Twitterのつぶやき</a></li>
+                            <li><a href="#calendar">カレンダー</a></li>
+                            <li><a href="#takoyakirainbow">???</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
             <h2>
-                My Muses
+                My Muse
             </h2>
             <p>
                 since 2012.9.17
@@ -41,10 +56,9 @@
 
         </header>
 
+        <section id="profile">
 
-        <section>
-
-
+            <div ></div>
             <hr>
             <header>
                 <h2>PROFILE</h2>
@@ -140,11 +154,35 @@
 
 
             </aside>
-            <hr>
-            <div>
+        </section>
+        <hr>
 
+        <article>
+            <aside id="timeline">
+                <p>つぶやき</p>
+            </aside>
+            <p>
+                みんなのつぶやきが見えるようにしています（偏っているように見えるのは更新頻度による差です）
+                <a class="twitter-timeline" data-lang="ja" data-dnt="true" data-theme="dark"
+                    href="https://twitter.com/tw_KaaS/lists/list-17391?ref_src=twsrc%5Etfw">A Twitter List by
+                    tw_KaaS</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </p>
+        </article>
+        <hr>
+        <article>
+            <aside id="calendar">
+                <p>カレンダー</p>
+            </aside>
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&title&showTitle=0&showNav=0&showPrint=0&showDate=0&showCalendars=1&showTz=0&mode=MONTH&src=YmNlNDhjNzUxNWNkNGNjZDY0Y2MyNzBlZWExNDU0MmU0OTkxNjhjYTgwMzE2YjYwMTAzMjFjNWZjMGQxYzgzYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23A79B8E&color=%230B8043"
+                style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </article>
+        <hr>
+        <div>
 
-                <details>
+            <article>
+                <details id="takoyakirainbow">
                     <summary>e.x.</summary>
 
                     <p>この５人の共通点って？</p>
@@ -195,9 +233,16 @@
 
 
                 </details>
-            </div>
-        </section>
+        </div>
+        </article>
+
     </main>
+
+    <footer>
+        <small>Contact InstagramID:_kos_0807_</small>
+
+    </footer>
+
 </body>
 
 </html>
